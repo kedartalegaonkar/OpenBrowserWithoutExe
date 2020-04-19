@@ -4,7 +4,7 @@ node {
              }
         
          stage ('Build') {
-                def mvntool = tool name: 'MAVEN_HOME', type: 'maven'
-                bat(/'mvn clean test'/)
+                def mvntool = tool name: 'MAVEN_HOME', type: 'maven'                
+		 bat 'mvn -f OpenBrowserWithoutExe/pom.xml clean install'
                }
 }
